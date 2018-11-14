@@ -3,7 +3,12 @@ if (typeof define !== 'function') { var define = require('amdefine')(module); }
 define(function() {
   return {
     valueAtBit: function(num, bit) {
-      return num & bit;
+      const binary = num.toString(2);
+      const result = bit > binary.length 
+        ? 0 
+        : binary.toString(2)[binary.length - bit];
+      
+      return parseInt(result, 10);
     },
 
     base10: function(str) {

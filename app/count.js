@@ -15,12 +15,12 @@ define(function () {
             } else {
               Print.counter(i)
             }
-          }, 50);
+          }, 80);
         },
         cancel: () => {
           setTimeout(() => {
             Print.stop = true;
-          }, 50);
+          }, 80);
         } 
       };
 
